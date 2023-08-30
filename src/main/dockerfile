@@ -1,0 +1,5 @@
+FROM bellsoft/liberica-openjdk-alpine:11.0.10
+COPY ./java ./src
+RUN mkdir ./out
+RUN javac -sourcepath ./src -d out src/ru/geekbrains/homework01/sample/Main.java
+CMD java -classpath ./out ru.geekbrains.homework01.sample.Main
